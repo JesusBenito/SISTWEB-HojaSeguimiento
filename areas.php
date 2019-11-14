@@ -33,7 +33,7 @@ include("head.php")
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Áreas</th>
+                                <th>Áreas Alberto</th>
                                 <th class="text-nowrap">Action</th>
                             </tr>
                         </thead>
