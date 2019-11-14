@@ -31,23 +31,6 @@
 <script src="plugins/bower_components/jquery-sparkline/jquery.sparkline.min.js"></script>
 <script src="plugins/bower_components/jquery-sparkline/jquery.charts-sparkline.js"></script>
 <script src="plugins/bower_components/toast-master/js/jquery.toast.js"></script>
-<script type="text/javascript">
-$(document).ready(function() {
-    $.toast({
-        heading: 'Welcome to Elite admin',
-        text: 'Use the predefined ones, or specify a custom position object.',
-        position: 'top-right',
-        loaderBg: '#ff6849',
-        icon: 'info',
-        hideAfter: 3500,
-
-        stack: 6
-    });
-    $('.vcarousel').carousel({
-        interval: 3000
-    });
-});
-</script>
 <!--Style Switcher -->
 <script src="plugins/bower_components/styleswitcher/jQuery.style.switcher.js"></script>
 <!-- Editable -->
