@@ -162,6 +162,21 @@
                     </div>
                 </li>
                 <!-- /.Clientes -->
+
+                <!-- .Clientes -->
+                <li class=""><a href="javascript:void(0)"><i data-icon="&#xe00b;" class="icon-note"></i></a>
+                    <div class="sidebarmenu">
+                        <!-- Left navbar-header -->
+                        <a href="clientes.php">
+                            <h3 class="menu-title">Actividades</h3>
+                        </a>
+                        <ul class="sidebar-menu">
+                            <li><a href="agregarActividad.php">Agregar Actividades </a></li>
+                        </ul>
+                        <!-- Left navbar-header end -->
+                    </div>
+                </li>
+                <!-- /.Clientes -->
             </ul>
         </div>
         <!-- /.Side panel -->
