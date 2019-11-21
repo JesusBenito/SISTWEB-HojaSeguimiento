@@ -31,9 +31,9 @@ include("head.php")
                     <table class="table table-bordered">
                         <thead>
                             <tr>
-                                <th>#</th>
+                                <th>Id_cliente</th>
                                 <th>Nombre Cliente</th>
-                                <th>Proyecto</th>                       
+                                <th>Id_proyecto</th>                       
                                 <th class="text-nowrap">Action</th>
                             </tr>
                         </thead>
@@ -42,6 +42,34 @@ include("head.php")
                                 <td>1</td>
                                 <td>Rosalia Avila</td>
                                 <td>1</td>
+                                <td class="text-nowrap">
+                                    <a href="#" data-toggle="tooltip" data-original-title="Editar"> <i
+                                            class="fa fa-pencil text-inverse m-r-10"></i> </a>
+                                    <a href="#" data-toggle="tooltip" data-original-title="Eliminar"> <i
+                                            class="fa fa-close text-danger"></i> </a>
+                                </td>
+                            </tr>
+        
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>2</td>
+                                <td>Julian</td>
+                                <td>2</td>
+                                <td class="text-nowrap">
+                                    <a href="#" data-toggle="tooltip" data-original-title="Editar"> <i
+                                            class="fa fa-pencil text-inverse m-r-10"></i> </a>
+                                    <a href="#" data-toggle="tooltip" data-original-title="Eliminar"> <i
+                                            class="fa fa-close text-danger"></i> </a>
+                                </td>
+                            </tr>
+        
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>3</td>
+                                <td>Joel Galindo</td>
+                                <td>3</td>
                                 <td class="text-nowrap">
                                     <a href="#" data-toggle="tooltip" data-original-title="Editar"> <i
                                             class="fa fa-pencil text-inverse m-r-10"></i> </a>
