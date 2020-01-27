@@ -1,18 +1,18 @@
 <?php
-include("head.php")
+include("../head.php")
 ?>
 
 <div class="container-fluid">
     <!-- .row -->
     <div class="row bg-title"
-        style="background:url(plugins/images/heading-title-bg.jpg) no-repeat center center /cover;">
+        style="background:url(../plugins/images/heading-title-bg.jpg) no-repeat center center /cover;">
         <div class="col-lg-12">
-            <h4 class="page-title">Estatus</h4>
+            <h4 class="page-title">Áreas</h4>
         </div>
         <div class="col-sm-6 col-md-6 col-xs-12">
             <ol class="breadcrumb pull-left">
-                <li><a href="index.php">Dashboard</a></li>
-                <li class="active">Estatus</li>
+                <li><a href="../index.php">Dashboard</a></li>
+                <li class="active">Áreas</li>
             </ol>
         </div>
 
@@ -23,8 +23,9 @@ include("head.php")
         <div class="col-sm-12">
             <div class="white-box">
                 <div class="d-flex justify-content-between">
-                <h3 class="box-title m-b-0">Estatus</h3>
-                <a href="agregarEstatus.php"><button class="fcbtn btn btn-success btn-outline btn-1b">Agregar</button></a>
+                    <h3 class="box-title m-b-0">Áreas</h3>
+                    <a href="../agregarArea"><button
+                            class="fcbtn btn btn-success btn-outline btn-1b">Agregar</button></a>
                 </div>
                 <br>
                 <div class="table-responsive">
@@ -32,7 +33,7 @@ include("head.php")
                         <thead>
                             <tr>
                                 <th>#</th>
-                                <th>Estatus</th>
+                                <th>Áreas</th>
                                 <th class="text-nowrap">Action</th>
                             </tr>
                         </thead>
@@ -40,7 +41,7 @@ include("head.php")
                             <tr>
                                 <td>1</td>
                                 <td>
-                                    Estatus 1
+                                    Área 1
                                 </td>
                                 <td class="text-nowrap">
                                     <a href="#" data-toggle="tooltip" data-original-title="Editar"> <i
@@ -52,7 +53,7 @@ include("head.php")
                             <tr>
                                 <td>2</td>
                                 <td>
-                                    Estatus 2
+                                    Área 2
                                 </td>
                                 <td class="text-nowrap">
                                     <a href="#" data-toggle="tooltip" data-original-title="Editar"> <i
@@ -64,7 +65,7 @@ include("head.php")
                             <tr>
                                 <td>3</td>
                                 <td>
-                                    Estatus 3
+                                    Área 3
                                 </td>
                                 <td class="text-nowrap">
                                     <a href="#" data-toggle="tooltip" data-original-title="Editar"> <i
@@ -76,7 +77,7 @@ include("head.php")
                             <tr>
                                 <td>4</td>
                                 <td>
-                                    Estatus 4
+                                    Área 4
                                 </td>
                                 <td class="text-nowrap">
                                     <a href="#" data-toggle="tooltip" data-original-title="Editar"> <i
@@ -88,7 +89,7 @@ include("head.php")
                             <tr>
                                 <td>5</td>
                                 <td>
-                                    Estatus 5
+                                    Área 5
                                 </td>
                                 <td class="text-nowrap">
                                     <a href="#" data-toggle="tooltip" data-original-title="Editar"> <i
@@ -100,7 +101,7 @@ include("head.php")
                             <tr>
                                 <td>6</td>
                                 <td>
-                                    Estatus 6
+                                    Área 6
                                 </td>
                                 <td class="text-nowrap">
                                     <a href="#" data-toggle="tooltip" data-original-title="Editar"> <i
@@ -117,9 +118,8 @@ include("head.php")
     </div>
     <!-- /.row -->
 
-
 </div><!-- /.container-fluid -->
 
 <?php
-include("footer.php")
+include("../footer.php")
 ?>

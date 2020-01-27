@@ -1,5 +1,5 @@
 <?php
-include("head.php")
+include("head1.php")
 ?>
 
 <div class="container-fluid">
@@ -103,5 +103,5 @@ include("head.php")
 </div><!-- /.container-fluid -->
 
 <?php
-include("footer.php")
+include("footer1.php")
 ?>

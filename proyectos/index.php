@@ -1,17 +1,17 @@
 <?php
-include("head.php")
+include("../head.php")
 ?>
 
 <div class="container-fluid">
     <!-- .row -->
     <div class="row bg-title"
-        style="background:url(plugins/images/heading-title-bg.jpg) no-repeat center center /cover;">
+        style="background:url(../plugins/images/heading-title-bg.jpg) no-repeat center center /cover;">
         <div class="col-lg-12">
             <h4 class="page-title">Proyectos</h4>
         </div>
         <div class="col-sm-6 col-md-6 col-xs-12">
             <ol class="breadcrumb pull-left">
-                <li><a href="index.php">Dashboard</a></li>
+                <li><a href="../index.php">Dashboard</a></li>
                 <li class="active">Proyectos</li>
             </ol>
         </div>
@@ -24,7 +24,7 @@ include("head.php")
             <div class="white-box">
                 <div class="d-flex justify-content-between">
                 <h3 class="box-title m-b-0">Proyectos</h3>
-                <a href="agregarProyecto.php"><button class="fcbtn btn btn-success btn-outline btn-1b">Agregar</button></a>
+                <a href="../agregarProyecto"><button class="fcbtn btn btn-success btn-outline btn-1b">Agregar</button></a>
                 </div>
                 <br>
                 <div class="table-responsive">
@@ -94,5 +94,5 @@ include("head.php")
 </div><!-- /.container-fluid -->
 
 <?php
-include("footer.php")
+include("../footer.php")
 ?>

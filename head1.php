@@ -7,22 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="plugins/images/favicon.png">
     <title>Control de Actividades</title>
     <!-- Bootstrap Core CSS -->
-    <link href="../bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../plugins/bower_components/bootstrap-extension/css/bootstrap-extension.css" rel="stylesheet">
+    <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="plugins/bower_components/bootstrap-extension/css/bootstrap-extension.css" rel="stylesheet">
     <!-- Editable CSS -->
-    <link type="text/css" rel="stylesheet" href="../plugins/bower_components/jsgrid/dist/jsgrid.min.css" />
-    <link type="text/css" rel="stylesheet" href="../plugins/bower_components/jsgrid/dist/jsgrid-theme.min.css" />
+    <link type="text/css" rel="stylesheet" href="plugins/bower_components/jsgrid/dist/jsgrid.min.css" />
+    <link type="text/css" rel="stylesheet" href="plugins/bower_components/jsgrid/dist/jsgrid-theme.min.css" />
     <!-- Menu CSS -->
-    <link href="../plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
+    <link href="plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css" rel="stylesheet">
     <!-- animation CSS -->
-    <link href="../css/animate.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="../css/style.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <!-- color CSS -->
-    <link href="../css/colors/green-dark.css" id="theme" rel="stylesheet">
+    <link href="css/colors/green-dark.css" id="theme" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -44,7 +44,7 @@
                 <ul class="nav navbar-top-links navbar-left hidden-xs">
                     <li>
                         <a href="javascript:void(0)">
-                            <!--This is logo text--><img src="../images/VLIM_ti.png" alt="home"
+                            <!--This is logo text--><img src="images/VLIM_ti.png" alt="home"
                                 class="light-logo" alt="home" href="index.php" style="width: 150px;"/></a>
                     </li>
                 </ul>
@@ -54,7 +54,7 @@
                     <!-- .dropdown -->
                     <li class="dropdown">
                         <a class="dropdown-toggle profile-pic" data-toggle="dropdown" href="#"> <img
-                                src="../plugins/images/users/profile.png" alt="user-img" width="36" class="img-circle"><b
+                                src="plugins/images/users/profile.png" alt="user-img" width="36" class="img-circle"><b
                                 class="hidden-xs">Administrador</b> </a>
                         <ul class="dropdown-menu dropdown-user animated flipInY">
                             <li><a href="#"><i class="ti-settings"></i> Account Setting</a></li>
@@ -80,12 +80,12 @@
                         <!-- Left navbar-header -->
                         <h3 class="menu-title">Dashboard</h3>
                         <ul class="sidebar-menu">
-                            <li><a href="../index.php">Inicio</a></li>
-                            <li><a href="../colaboradores">Colaboradores</a></li>
-                            <li><a href="../estatus">Estatus</a></li>
-                            <li><a href="../areas">Áreas</a></li>
-                            <li><a href="../proyectos">Proyectos</a></li>
-                            <li><a href="../clientes">Clientes</a></li>
+                            <li><a href="index.php">Inicio</a></li>
+                            <li><a href="colaboradores">Colaboradores</a></li>
+                            <li><a href="estatus">Estatus</a></li>
+                            <li><a href="areas">Áreas</a></li>
+                            <li><a href="proyectos">Proyectos</a></li>
+                            <li><a href="clientes">Clientes</a></li>
                         </ul>
                         <!-- Left navbar-header end -->
                     </div>
@@ -95,11 +95,11 @@
                 <li class=""><a href="javascript:void(0)"><i data-icon=")" class="icon-people"></i></a>
                     <div class="sidebarmenu">
                         <!-- Left navbar-header -->
-                        <a href="../colaboradores">
+                        <a href="./colaboradores">
                             <h3 class="menu-title">Colaboradoradores</h3>
                         </a>
                         <ul class="sidebar-menu">
-                            <li><a href="../agregarColaborador">Agregar Colaboradores</a></li>
+                            <li><a href="agregarColaborador">Agregar Colaboradores</a></li>
                         </ul>
                         <!-- Left navbar-header end -->
                     </div>
@@ -109,11 +109,11 @@
                 <li><a href="javascript:void(0)"><i data-icon="/" class="icon-emotsmile"></i></a>
                     <div class="sidebarmenu">
                         <!-- Left navbar-header -->
-                        <a href="../estatus">
+                        <a href="estatus">
                             <h3 class="menu-title">Estatus</h3>
                         </a>
                         <ul class="sidebar-menu">
-                            <li><a href="../agregarEstatus">Agregar Estatus</a></li>
+                            <li><a href="agregarEstatus">Agregar Estatus</a></li>
                         </ul>
                         <!-- Left navbar-header end -->
                     </div>
@@ -124,11 +124,11 @@
                             class="linea-icon linea-basic fa-fw"></i></a>
                     <div class="sidebarmenu">
                         <!-- Left navbar-header -->
-                        <a href="../areas">
+                        <a href="areas">
                             <h3 class="menu-title">Areas</h3>
                         </a>
                         <ul class="sidebar-menu">
-                            <li><a href="../agregarArea">Agregar Areas</a></li>
+                            <li><a href="agregarArea">Agregar Areas</a></li>
                         </ul>
                         <!-- Left navbar-header end -->
                     </div>
@@ -138,11 +138,11 @@
                 <li class=""><a href="javascript:void(0)"><i data-icon="&#xe00b;" class="icon-folder-alt"></i></a>
                     <div class="sidebarmenu">
                         <!-- Left navbar-header -->
-                        <a href="../proyectos">
+                        <a href="./proyectos">
                             <h3 class="menu-title">Proyectos</h3>
                         </a>
                         <ul class="sidebar-menu">
-                            <li><a href="../agregarProyecto">Agregar Proyectos</a></li>
+                            <li><a href="agregarProyecto">Agregar Proyectos</a></li>
                         </ul>
                         <!-- Left navbar-header end -->
                     </div>
@@ -152,11 +152,11 @@
                 <li class=""><a href="javascript:void(0)"><i data-icon="&#xe00b;" class="icon-user-following"></i></a>
                     <div class="sidebarmenu">
                         <!-- Left navbar-header -->
-                        <a href="../clientes">
+                        <a href="clientes">
                             <h3 class="menu-title">Clientes</h3>
                         </a>
                         <ul class="sidebar-menu">
-                            <li><a href="../agregarCliente">Agregar Clientes </a></li>
+                            <li><a href="agregarCliente">Agregar Clientes </a></li>
                         </ul>
                         <!-- Left navbar-header end -->
                     </div>
@@ -167,11 +167,11 @@
                 <li class=""><a href="javascript:void(0)"><i data-icon="&#xe00b;" class="icon-note"></i></a>
                     <div class="sidebarmenu">
                         <!-- Left navbar-header -->
-                        <a href="../actividades">
+                        <a href="actividades">
                             <h3 class="menu-title">Actividades</h3>
                         </a>
                         <ul class="sidebar-menu">
-                            <li><a href="../agregarActividad">Agregar Actividades </a></li>
+                            <li><a href="agregarActividad">Agregar Actividades </a></li>
                         </ul>
                         <!-- Left navbar-header end -->
                     </div>

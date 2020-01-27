@@ -1,9 +1,23 @@
 <?php
-include("head.php")
+include("../head.php")
 ?>
 
+<div class="row bg-title"
+        style="background:url(../plugins/images/heading-title-bg.jpg) no-repeat center center /cover;">
+        <div class="col-lg-12">
+            <h4 class="page-title">Áreas</h4>
+        </div>
+        <div class="col-sm-6 col-md-6 col-xs-12">
+            <ol class="breadcrumb pull-left">
+                <li><a href="../index.php">Dashboard</a></li>
+                <li class="active">Agregar Nueva Área</li>
+            </ol>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
 
     <div class="container">
+        
 
         <div class="card o-hidden border-0 shadow-lg my-5">
             <div class="card-body p-0">
@@ -12,7 +26,7 @@ include("head.php")
                     <div class="col-lg-12">
                         <div class="p-5">
                             <div class="text-center">
-                                <img src="VLIM_ti.png" width= "600px" />
+                                <img src="../VLIM_ti.png" width= "600px" />
                             </div>
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">Nueva Actividad</h1>
@@ -84,6 +98,7 @@ include("head.php")
         </div>
         <br>
         <br>
+    </div>
 <?php
-include("footer.php")
+include("../footer.php")
 ?>

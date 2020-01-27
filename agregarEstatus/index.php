@@ -1,35 +1,35 @@
 <?php
-include("head.php")
+include("../head.php")
 ?>
 
 <div class="container-fluid">
     <!-- .row -->
     <div class="row bg-title"
-        style="background:url(plugins/images/heading-title-bg.jpg) no-repeat center center /cover;">
+        style="background:url(../plugins/images/heading-title-bg.jpg) no-repeat center center /cover;">
         <div class="col-lg-12">
-            <h4 class="page-title">Áreas</h4>
+            <h4 class="page-title">Areas</h4>
         </div>
         <div class="col-sm-6 col-md-6 col-xs-12">
             <ol class="breadcrumb pull-left">
-                <li><a href="index.php">Dashboard</a></li>
-                <li><a href="areas.php">Áreas</a></li>
-                <li class="active">Agregar Nueva Área</li>
+                <li><a href="../index.php">Dashboard</a></li>
+                <li><a href="../estatus">Estatus</a></li>
+                <li class="active">Agregar Estatus</li>
             </ol>
         </div>
 
         <!-- /.col-lg-12 -->
     </div>
-     <!--row -->
-     <div class="row">
+    <!--row -->
+    <div class="row">
         <div class="col-sm-12">
             <div class="white-box">
-                <h3 class="box-title m-b-0">Agregar Cliente</h3>
-                <p class="text-muted m-b-30"> Ej. Juan Carlos Hernandez Hernandez </p>
+                <h3 class="box-title m-b-0">Agregar Estatus</h3>
+                <p class="text-muted m-b-30"> Ej. En Progreso</p>
                 <form data-toggle="validator" novalidate="true">
                     <div class="form-group">
-                        <label for="inputName" class="control-label">Clientes</label>
-                        <input type="text" class="form-control" id="inputName" placeholder="Ingresar Nombre Completo" required=""
-                            data-error="Por favor, ingresa tu nombre completo.">
+                        <label for="inputName" class="control-label">Estatus</label>
+                        <input type="text" class="form-control" id="inputName" placeholder="Ingresar tipo de estatus ..." required=""
+                            data-error="Por favor, ingresa el tipo de estatus.">
                         <div class="help-block with-errors"></div>
                     </div>
                     <div class="form-group">
@@ -44,5 +44,5 @@ include("head.php")
 </div><!-- /.container-fluid -->
 
 <?php
-include("footer.php")
+include("../footer.php")
 ?>
