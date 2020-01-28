@@ -25,15 +25,15 @@ include("../head.php")
             <div class="white-box">
                 <h3 class="box-title m-b-0">Agregar Estatus</h3>
                 <p class="text-muted m-b-30"> Ej. En Progreso</p>
-                <form data-toggle="validator" novalidate="true">
+                <form data-toggle="validator" novalidate="true" enctype="multipart/form-data" method="post">
                     <div class="form-group">
                         <label for="inputName" class="control-label">Estatus</label>
-                        <input type="text" class="form-control" id="inputName" placeholder="Ingresar tipo de estatus ..." required=""
+                        <input type="text" class="form-control" id="estatus_name" placeholder="Ingresar tipo de estatus ..." required=""
                             data-error="Por favor, ingresa el tipo de estatus.">
                         <div class="help-block with-errors"></div>
                     </div>
                     <div class="form-group">
-                        <button type="submit" class="btn btn-success disabled">Guardar</button>
+                        <button type="submit" class="btn btn-success disabled" id="agregar_estatus">Guardar</button>
                     </div>
                 </form>
             </div>

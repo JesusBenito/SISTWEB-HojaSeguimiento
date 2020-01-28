@@ -7,7 +7,7 @@ include("../head.php")
     <div class="row bg-title"
         style="background:url(../plugins/images/heading-title-bg.jpg) no-repeat center center /cover;">
         <div class="col-lg-12">
-            <h4 class="page-title">Áreas</h4>
+            <h4 class="page-title">Clientes</h4>
         </div>
         <div class="col-sm-6 col-md-6 col-xs-12">
             <ol class="breadcrumb pull-left">
