@@ -1,7 +1,7 @@
 <?php
 include("../head.php")
 ?>
-
+hola
 <div class="container-fluid">
     <!-- .row -->
     <div class="row bg-title"
@@ -36,67 +36,55 @@ include("../head.php")
                                 <th>Nombre</th>
                                 <th>Telefono</th>
                                 <th>Correo</th>
-                                <th>Área</th>
                                 <th>Fecha de Nacimiento</th>
-                                <th>Dirección</th>                            
+                                <th>Dirección</th> 
+                                <th>Área</th>
                                 <th class="text-nowrap">Action</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>
-                                    20190190
-                                </td>
-                                <td>Edgar Enrique De la Cruz Osorio</td>
-                                <td>55 1234 5678</td>
-                                <td>edgar.delacruz@vlim.com.mx</td>
-                                <td>Diseño Web</td>
-                                <td>31/05/1995</td>
-                                <td>Cerro 1 #9 Naucalpan de Juarez, Estado de Mexico</td>
-                                <td class="text-nowrap">
-                                    <a href="#" data-toggle="tooltip" data-original-title="Editar"> <i
-                                            class="fa fa-pencil text-inverse m-r-10"></i> </a>
-                                    <a href="#" data-toggle="tooltip" data-original-title="Eliminar"> <i
-                                            class="fa fa-close text-danger"></i> </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>
-                                    20190180
-                                </td>
-                                <td>Alberto Noriega Estudillo</td>
-                                <td>55 1234 5678</td>
-                                <td>alberto.noriega@vlim.com.mx</td>
-                                <td>Diseño Web</td>
-                                <td>08/12/1997</td>
-                                <td>Cerro 1 #9 Naucalpan de Juarez, Estado de Mexico</td>
-                                <td class="text-nowrap">
-                                    <a href="#" data-toggle="tooltip" data-original-title="Editar"> <i
-                                            class="fa fa-pencil text-inverse m-r-10"></i> </a>
-                                    <a href="#" data-toggle="tooltip" data-original-title="Eliminar"> <i
-                                            class="fa fa-close text-danger"></i> </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>
-                                    20190200
-                                </td>
-                                <td>Sergio Soto Pantaleon</td>
-                                <td>55 1234 5678</td>
-                                <td>sergio.soto@vlim.com.mx</td>
-                                <td>Diseño Web</td>
-                                <td>01/01/1999</td>
-                                <td>Cerro 1 #9 Naucalpan de Juarez, Estado de Mexico</td>
-                                <td class="text-nowrap">
-                                    <a href="#" data-toggle="tooltip" data-original-title="Editar"> <i
-                                            class="fa fa-pencil text-inverse m-r-10"></i> </a>
-                                    <a href="#" data-toggle="tooltip" data-original-title="Eliminar"> <i
-                                            class="fa fa-close text-danger"></i> </a>
-                                </td>
-                            </tr>
+                       
+                            <?php
+                            include ("../conn.php");
+                            $queryEstatus = "SELECT * FROM `colaboradores`;";
+                            $resultEstatus = mysqli_query($conn, $queryEstatus);
+                            if ($resultEstatus) {
+                                $num_rows = mysqli_num_rows($resultEstatus);
+                                if ($num_rows > 0){
+                                    while($row = mysqli_fetch_array($resultEstatus)) {
+                                        echo '
+                                        <tr>
+                                            <td>'.$row['id_colaborador'].'</td>
+                                            <td>'.$row['numero_colaborador'].'</td>
+                                            <td>'.$row['nombre'].'</td>
+                                            <td>'.$row['telefono'].'</td>
+                                            <td>'.$row['correo'].'</td>
+                                            <td>'.$row['fecha_nacimineto'].'</td>
+                                            <td>'.$row['direccion'].'</td>
+                                            <td>'.$row['area'].'</td>
+                                            <td>
+                                                <button class="btn btn-danger btn-circle btn-sm bajaMarca" data-id_colaborador="'.$row['id_colaborador'].'" data-n_colaborador="'.$row['numero_colaborador'].'" data-toggle="tooltip"
+                                                data-placement="left" title="Eliminar Estatus">
+                                                    <i class="fa fa-trash-o"></i>
+                                                </button>
+                                                
+                                                <a href="../modificar-estatus" class="btn btn-primary btn-circle btn-sm" data-toggle="tooltip"
+                                                data-placement="right" title="Modificar Estatus">
+                                                    <i class="fa fa-pencil"></i>
+                                                </a>'.'
+                                            </td>
+                                        </tr>
+                                        ';
+                                    }
+                                } else {
+                                    echo "No hay registros";
+                                }
+                            } else {
+                                echo "Error: " . mysqli_error($conn);
+                            }
+                            mysqli_free_result($resultEstatus);
+                            mysqli_close($conn);
+                            ?>
                         </tbody>
                     </table>
                 </div>
