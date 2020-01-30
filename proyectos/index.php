@@ -41,48 +41,45 @@ include("../head.php")
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Diseño Web</td>
-                                <td>Itecsa</td>
-                                <td>31/12/2019</td>
-                                <td>1</td>
-                                <td>2</td>
-                                <td class="text-nowrap">
-                                    <a href="#" data-toggle="tooltip" data-original-title="Editar"> <i
-                                            class="fa fa-pencil text-inverse m-r-10"></i> </a>
-                                    <a href="#" data-toggle="tooltip" data-original-title="Eliminar"> <i
-                                            class="fa fa-close text-danger"></i> </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Diseño Web</td>
-                                <td>Historias en Papel</td>
-                                <td>31/12/2019</td>
-                                <td>1</td>
-                                <td>2</td>
-                                <td class="text-nowrap">
-                                    <a href="#" data-toggle="tooltip" data-original-title="Editar"> <i
-                                            class="fa fa-pencil text-inverse m-r-10"></i> </a>
-                                    <a href="#" data-toggle="tooltip" data-original-title="Eliminar"> <i
-                                            class="fa fa-close text-danger"></i> </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>Diseño Web</td>
-                                <td>Herbica</td>
-                                <td>31/12/2019</td>
-                                <td>1</td>
-                                <td>2</td>
-                                <td class="text-nowrap">
-                                    <a href="#" data-toggle="tooltip" data-original-title="Editar"> <i
-                                            class="fa fa-pencil text-inverse m-r-10"></i> </a>
-                                    <a href="#" data-toggle="tooltip" data-original-title="Eliminar"> <i
-                                            class="fa fa-close text-danger"></i> </a>
-                                </td>
-                            </tr>
+                        <?php
+                            include ("../conn.php");
+                            $queryEstatus = "SELECT * FROM `cat_proyectos`;";
+                            $resultEstatus = mysqli_query($conn, $queryEstatus);
+                            if ($resultEstatus) {
+                                $num_rows = mysqli_num_rows($resultEstatus);
+                                if ($num_rows > 0){
+                                    while($row = mysqli_fetch_array($resultEstatus)) {
+                                        echo '
+                                        <tr>
+                                            <td>'.$row['id_proyecto'].'</td>
+                                            <td>'.$row['tipo_proyecto'].'</td>
+                                            <td>'.$row['nombre_proyecto'].'</td>
+                                            <td>'.$row['fecha_entrega'].'</td>
+                                            <td>'.$row['id_estatus'].'</td>
+                                            <td>'.$row['id_colaborador'].'</td>
+                                            <td>
+                                                <button class="btn btn-danger btn-circle btn-sm bajaMarca" data-idproyecto="'.$row['id_proyecto'].'" data-tipoproyecto="'.$row['tipo_proyecto'].'" data-nombreproyecto="'.$row['nombre_proyecto'].'" data-fechaentrega="'.$row['fecha_entrega'].'" data-idestatus="'.$row['id_estatus'].'" data-idcolaborador="'.$row['id_colaborador'].'" data-toggle="tooltip"
+                                                data-placement="left" title="Eliminar Estatus">
+                                                    <i class="fa fa-trash-o"></i>
+                                                </button>
+                                                
+                                                <a href="../modificar-estatus" class="btn btn-primary btn-circle btn-sm" data-toggle="tooltip"
+                                                data-placement="right" title="Modificar Estatus">
+                                                    <i class="fa fa-pencil"></i>
+                                                </a>'.'
+                                            </td>
+                                        </tr>
+                                        ';
+                                    }
+                                } else {
+                                    echo "No hay registros";
+                                }
+                            } else {
+                                echo "Error: " . mysqli_error($conn);
+                            }
+                            mysqli_free_result($resultEstatus);
+                            mysqli_close($conn);
+                            ?>
                         </tbody>
                     </table>
                 </div>

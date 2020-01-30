@@ -1,7 +1,6 @@
 <?php
 include("../head.php")
 ?>
-
 <div class="container-fluid">
     <!-- .row -->
     <div class="row bg-title"
@@ -15,10 +14,8 @@ include("../head.php")
                 <li class="active">Áreas</li>
             </ol>
         </div>
-
         <!-- /.col-lg-12 -->
     </div>
-
     <div class="row">
         <div class="col-sm-12">
             <div class="white-box">
@@ -38,78 +35,41 @@ include("../head.php")
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>
-                                    Área 1
-                                </td>
-                                <td class="text-nowrap">
-                                    <a href="#" data-toggle="tooltip" data-original-title="Editar"> <i
-                                            class="fa fa-pencil text-inverse m-r-10"></i> </a>
-                                    <a href="#" data-toggle="tooltip" data-original-title="Eliminar"> <i
-                                            class="fa fa-close text-danger"></i> </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>
-                                    Área 2
-                                </td>
-                                <td class="text-nowrap">
-                                    <a href="#" data-toggle="tooltip" data-original-title="Editar"> <i
-                                            class="fa fa-pencil text-inverse m-r-10"></i> </a>
-                                    <a href="#" data-toggle="tooltip" data-original-title="Eliminar"> <i
-                                            class="fa fa-close text-danger"></i> </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>
-                                    Área 3
-                                </td>
-                                <td class="text-nowrap">
-                                    <a href="#" data-toggle="tooltip" data-original-title="Editar"> <i
-                                            class="fa fa-pencil text-inverse m-r-10"></i> </a>
-                                    <a href="#" data-toggle="tooltip" data-original-title="Eliminar"> <i
-                                            class="fa fa-close text-danger"></i> </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>4</td>
-                                <td>
-                                    Área 4
-                                </td>
-                                <td class="text-nowrap">
-                                    <a href="#" data-toggle="tooltip" data-original-title="Editar"> <i
-                                            class="fa fa-pencil text-inverse m-r-10"></i> </a>
-                                    <a href="#" data-toggle="tooltip" data-original-title="Eliminar"> <i
-                                            class="fa fa-close text-danger"></i> </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>5</td>
-                                <td>
-                                    Área 5
-                                </td>
-                                <td class="text-nowrap">
-                                    <a href="#" data-toggle="tooltip" data-original-title="Editar"> <i
-                                            class="fa fa-pencil text-inverse m-r-10"></i> </a>
-                                    <a href="#" data-toggle="tooltip" data-original-title="Eliminar"> <i
-                                            class="fa fa-close text-danger"></i> </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>6</td>
-                                <td>
-                                    Área 6
-                                </td>
-                                <td class="text-nowrap">
-                                    <a href="#" data-toggle="tooltip" data-original-title="Editar"> <i
-                                            class="fa fa-pencil text-inverse m-r-10"></i> </a>
-                                    <a href="#" data-toggle="tooltip" data-original-title="Eliminar"> <i
-                                            class="fa fa-close text-danger"></i> </a>
-                                </td>
-                            </tr>
+                        <?php
+                            include ("../conn.php");
+                            $queryEstatus = "SELECT * FROM `cat_area`;";
+                            $resultEstatus = mysqli_query($conn, $queryEstatus);
+                            if ($resultEstatus) {
+                                $num_rows = mysqli_num_rows($resultEstatus);
+                                if ($num_rows > 0){
+                                    while($row = mysqli_fetch_array($resultEstatus)) {
+                                        echo '
+                                        <tr>
+                                            <td>'.$row['id_area'].'</td>
+                                            <td>'.$row['area'].'</td>
+                                            <td>
+                                                <button class="btn btn-danger btn-circle btn-sm bajaMarca" data-idmarca="'.$row['id_area'].'" data-marca="'.$row['area'].'" data-toggle="tooltip"
+                                                data-placement="left" title="Eliminar Estatus">
+                                                    <i class="fa fa-trash-o"></i>
+                                                </button>
+                                                
+                                                <a href="../modificar-estatus" class="btn btn-primary btn-circle btn-sm" data-toggle="tooltip"
+                                                data-placement="right" title="Modificar Estatus">
+                                                    <i class="fa fa-pencil"></i>
+                                                </a>'.'
+                                            </td>
+                                        </tr>
+                                        ';
+                                    }
+                                } else {
+                                    echo "No hay registros";
+                                }
+                            } else {
+                                echo "Error: " . mysqli_error($conn);
+                            }
+                            mysqli_free_result($resultEstatus);
+                            mysqli_close($conn);
+                            ?>
                         </tbody>
                     </table>
                 </div>
@@ -119,7 +79,6 @@ include("../head.php")
     <!-- /.row -->
 
 </div><!-- /.container-fluid -->
-
 <?php
 include("../footer.php")
 ?>
