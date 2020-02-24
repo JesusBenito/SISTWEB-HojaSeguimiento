@@ -1,7 +1,6 @@
 <?php
 include("../head.php")
 ?>
-hola
 <div class="container-fluid">
     <!-- .row -->
     <div class="row bg-title"

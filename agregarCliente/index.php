@@ -24,10 +24,9 @@ include("../head.php")
         <div class="col-sm-12">
             <div class="white-box">
                 <h3 class="box-title m-b-0">Agregar Cliente</h3>
-                <p class="text-muted m-b-30"> Ej. Juan Carlos Hernandez Hernandez </p>
                 <form data-toggle="validator" novalidate="true">
                     <div class="form-group">
-                        <label for="inputName" class="control-label">Clientes</label>
+                        <label for="inputName" class="control-label">Cliente</label>
                         <input type="text" class="form-control" id="inputName" placeholder="Ingresar Nombre Completo" required=""
                             data-error="Por favor, ingresa tu nombre completo.">
                         <div class="help-block with-errors"></div>

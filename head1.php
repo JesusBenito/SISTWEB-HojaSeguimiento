@@ -91,79 +91,7 @@
                     </div>
                 </li>
                 <!-- /.Dashboard -->
-                <!-- .Colaboradoradores -->
-                <li class=""><a href="javascript:void(0)"><i data-icon=")" class="icon-people"></i></a>
-                    <div class="sidebarmenu">
-                        <!-- Left navbar-header -->
-                        <a href="./colaboradores">
-                            <h3 class="menu-title">Colaboradoradores</h3>
-                        </a>
-                        <ul class="sidebar-menu">
-                            <li><a href="agregarColaborador">Agregar Colaboradores</a></li>
-                        </ul>
-                        <!-- Left navbar-header end -->
-                    </div>
-                </li>
-                <!-- /.Colaboradoradores -->
-                <!-- .Estatus -->
-                <li><a href="javascript:void(0)"><i data-icon="/" class="icon-emotsmile"></i></a>
-                    <div class="sidebarmenu">
-                        <!-- Left navbar-header -->
-                        <a href="estatus">
-                            <h3 class="menu-title">Estatus</h3>
-                        </a>
-                        <ul class="sidebar-menu">
-                            <li><a href="agregarEstatus">Agregar Estatus</a></li>
-                        </ul>
-                        <!-- Left navbar-header end -->
-                    </div>
-                </li>
-                <!-- /.Estatus -->
-                <!-- .Areas -->
-                <li class=""><a href="javascript:void(0)"><i data-icon="&#xe00b;"
-                            class="linea-icon linea-basic fa-fw"></i></a>
-                    <div class="sidebarmenu">
-                        <!-- Left navbar-header -->
-                        <a href="areas">
-                            <h3 class="menu-title">Areas</h3>
-                        </a>
-                        <ul class="sidebar-menu">
-                            <li><a href="agregarArea">Agregar Areas</a></li>
-                        </ul>
-                        <!-- Left navbar-header end -->
-                    </div>
-                </li>
-                <!-- /.Areas -->
-                <!-- .Proyectos -->
-                <li class=""><a href="javascript:void(0)"><i data-icon="&#xe00b;" class="icon-folder-alt"></i></a>
-                    <div class="sidebarmenu">
-                        <!-- Left navbar-header -->
-                        <a href="./proyectos">
-                            <h3 class="menu-title">Proyectos</h3>
-                        </a>
-                        <ul class="sidebar-menu">
-                            <li><a href="agregarProyecto">Agregar Proyectos</a></li>
-                        </ul>
-                        <!-- Left navbar-header end -->
-                    </div>
-                </li>
-                <!-- /.Proyectos -->
-                <!-- .Clientes -->
-                <li class=""><a href="javascript:void(0)"><i data-icon="&#xe00b;" class="icon-user-following"></i></a>
-                    <div class="sidebarmenu">
-                        <!-- Left navbar-header -->
-                        <a href="clientes">
-                            <h3 class="menu-title">Clientes</h3>
-                        </a>
-                        <ul class="sidebar-menu">
-                            <li><a href="agregarCliente">Agregar Clientes </a></li>
-                        </ul>
-                        <!-- Left navbar-header end -->
-                    </div>
-                </li>
-                <!-- /.Clientes -->
-
-                <!-- .Clientes -->
+                <!-- .Actividades -->
                 <li class=""><a href="javascript:void(0)"><i data-icon="&#xe00b;" class="icon-note"></i></a>
                     <div class="sidebarmenu">
                         <!-- Left navbar-header -->
@@ -176,7 +104,7 @@
                         <!-- Left navbar-header end -->
                     </div>
                 </li>
-                <!-- /.Clientes -->
+                <!-- /.Actividades -->
             </ul>
         </div>
         <!-- /.Side panel -->

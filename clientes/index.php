@@ -31,52 +31,47 @@ include("../head.php")
                     <table class="table table-bordered">
                         <thead>
                             <tr>
+                                <th class="text-nowrap">Opciones</th>
                                 <th>Id_cliente</th>
                                 <th>Nombre Cliente</th>
-                                <th>Id_proyecto</th>                       
-                                <th class="text-nowrap">Action</th>
+                                <th>Id_proyecto</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Rosalia Avila</td>
-                                <td>1</td>
-                                <td class="text-nowrap">
-                                    <a href="#" data-toggle="tooltip" data-original-title="Editar"> <i
-                                            class="fa fa-pencil text-inverse m-r-10"></i> </a>
-                                    <a href="#" data-toggle="tooltip" data-original-title="Eliminar"> <i
-                                            class="fa fa-close text-danger"></i> </a>
-                                </td>
-                            </tr>
-        
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>2</td>
-                                <td>Julian</td>
-                                <td>2</td>
-                                <td class="text-nowrap">
-                                    <a href="#" data-toggle="tooltip" data-original-title="Editar"> <i
-                                            class="fa fa-pencil text-inverse m-r-10"></i> </a>
-                                    <a href="#" data-toggle="tooltip" data-original-title="Eliminar"> <i
-                                            class="fa fa-close text-danger"></i> </a>
-                                </td>
-                            </tr>
-        
-                        </tbody>
-                        <tbody>
-                            <tr>
-                                <td>3</td>
-                                <td>Joel Galindo</td>
-                                <td>3</td>
-                                <td class="text-nowrap">
-                                    <a href="#" data-toggle="tooltip" data-original-title="Editar"> <i
-                                            class="fa fa-pencil text-inverse m-r-10"></i> </a>
-                                    <a href="#" data-toggle="tooltip" data-original-title="Eliminar"> <i
-                                            class="fa fa-close text-danger"></i> </a>
-                                </td>
-                            </tr>
+                        <?php
+                        include ("../conn.php");
+                        $queryUsuarios = "SELECT * FROM `cat_clientes`;";
+                                            $resultUsuarios = mysqli_query($conn, $queryUsuarios);
+                                            if($resultUsuarios){  // returned TRUE, e.g. in case of a DELETE sql
+                                              $num_rows = mysqli_num_rows($resultUsuarios);
+                                              if($num_rows > 0){
+                                                while($row = mysqli_fetch_array($resultUsuarios)){
+                                                  echo '
+                                                  <tr>
+                                                  <td style="text-align: center;">'.'
+                                                  <a href="peticiones/baja-libro.php/?id='.$row['Id_cliente'].'" class="btn btn-danger btn-circle btn-sm" data-toggle="tooltip" data-placement="top" title="Eliminar cliente">
+                                                      <i class="fa fa-remove"></i>
+                                                  </a>'.'
+                                                  <a href="modificar-libro.php?id='.$row['Id_cliente'].'" class="btn btn-primary btn-circle btn-sm" data-toggle="tooltip" data-placement="top" title="Modificar cliente">
+                                                      <i class="fa fa-edit"></i>
+                                                  </a>'.'
+                                              </td>
+                                                    <td>'.$row['Id_cliente'].'</td>
+                                                    <td>'.$row['nombre_cliente'].'</td>
+                                                    <td>'.$row['id_proyecto'].'</td>
+                                                  </tr>
+                                                  ';
+                                                }
+                                              }
+                                              else{
+                                                echo "No hay registros";
+                                              }
+                                            } else { // returned FALSE
+                                              echo "Error: " . mysqli_error($conn);
+                                            }
+                                            mysqli_free_result($resultUsuarios);
+                                            mysqli_close($conn);
+                                          ?>
         
                         </tbody>
                     </table>
