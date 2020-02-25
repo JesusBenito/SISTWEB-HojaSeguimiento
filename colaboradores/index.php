@@ -138,7 +138,6 @@ include("../head.php")
                                     while ($row = mysqli_fetch_array($resultEstatus)) {
                                         echo '
                                         <tr>
-                                            <td>' . $row['id_colaborador'] . '</td>
                                             <td>' . $row['numero_colaborador'] . '</td>
                                             <td>' . $row['nombre'] . '</td>
                                             <td>' . $row['telefono'] . '</td>
