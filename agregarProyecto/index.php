@@ -43,19 +43,49 @@ include("../head.php")
                     <div class="form-group">
                         <label class="control-label">Estatus</label>
                         <select class="form-control" data-placeholder="Choose a Category" tabindex="1">
-                            <option value="Category 1">Category 1</option>
-                            <option value="Category 2">Category 2</option>
-                            <option value="Category 3">Category 5</option>
-                            <option value="Category 4">Category 4</option>
+                            <?php
+								include "../conn.php";
+								$queryBuscaPerfil = "SELECT * FROM `cat_estatus` ORDER BY estatus ASC";
+								$resultPerfil = mysqli_query($conn, $queryBuscaPerfil);
+								if ($resultPerfil) {
+									$num_rows = mysqli_num_rows($resultPerfil);
+									if ($num_rows > 0) {
+										while ($row = mysqli_fetch_array($resultPerfil)) {
+											echo '<option value="' . $row['id_estatus'] . '"> ' . $row['estatus'] . ' </option>';
+										}
+									} else {
+										echo "No hay registros";
+									}
+								} else {
+									echo "Error: " . mysqli_error($conn);
+								}
+								mysqli_free_result($resultPerfil);
+								mysqli_close($conn);
+								?>
                         </select>
                     </div>
                     <div class="form-group">
                         <label class="control-label">Colaborador</label>
                         <select class="form-control" data-placeholder="Choose a Category" tabindex="1">
-                            <option value="Category 1">Category 1</option>
-                            <option value="Category 2">Category 2</option>
-                            <option value="Category 3">Category 5</option>
-                            <option value="Category 4">Category 4</option>
+                        <?php
+								include "../conn.php";
+								$queryBuscaPerfil = "SELECT * FROM `colaboradores`";
+								$resultPerfil = mysqli_query($conn, $queryBuscaPerfil);
+								if ($resultPerfil) {
+									$num_rows = mysqli_num_rows($resultPerfil);
+									if ($num_rows > 0) {
+										while ($row = mysqli_fetch_array($resultPerfil)) {
+											echo '<option value="' . $row['id_colaborador'] . '"> ' . $row['nombre'] . ' </option>';
+										}
+									} else {
+										echo "No hay registros";
+									}
+								} else {
+									echo "Error: " . mysqli_error($conn);
+								}
+								mysqli_free_result($resultPerfil);
+								mysqli_close($conn);
+								?>
                         </select>
                     </div>
             </div>
