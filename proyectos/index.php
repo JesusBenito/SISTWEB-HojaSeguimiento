@@ -31,7 +31,6 @@ include("../head.php")
                     <table class="table table-bordered">
                         <thead>
                             <tr>
-                                <th>#</th>
                                 <th>Tipo de Proyecto</th>
                                 <th>Nombre Proyecto</th>
                                 <th>Fecha Entrega</th>
@@ -43,7 +42,18 @@ include("../head.php")
                         <tbody>
                         <?php
                             include ("../conn.php");
-                            $queryEstatus = "SELECT * FROM `cat_proyectos`;";
+                            $queryEstatus = "SELECT
+                                            `cat_proyectos`.*,
+                                            `cat_estatus`.*,
+                                            `colaboradores`.* 
+                                             FROM
+                                            `cat_proyectos`,
+                                            `cat_estatus`,
+                                            `colaboradores`
+                                            WHERE
+                                            `cat_proyectos`.id_colaborador=`colaboradores`.id_colaborador
+                                            AND
+                                            `cat_estatus`.id_estatus=`cat_proyectos`.id_estatus";
                             $resultEstatus = mysqli_query($conn, $queryEstatus);
                             if ($resultEstatus) {
                                 $num_rows = mysqli_num_rows($resultEstatus);
@@ -51,12 +61,11 @@ include("../head.php")
                                     while($row = mysqli_fetch_array($resultEstatus)) {
                                         echo '
                                         <tr>
-                                            <td>'.$row['id_proyecto'].'</td>
                                             <td>'.$row['tipo_proyecto'].'</td>
                                             <td>'.$row['nombre_proyecto'].'</td>
                                             <td>'.$row['fecha_entrega'].'</td>
-                                            <td>'.$row['id_estatus'].'</td>
-                                            <td>'.$row['id_colaborador'].'</td>
+                                            <td>'.$row['estatus'].'</td>
+                                            <td>'.$row['nombre'].'</td>
                                             <td>
                                                 <button class="btn btn-danger btn-circle btn-sm bajaMarca" data-idproyecto="'.$row['id_proyecto'].'" data-tipoproyecto="'.$row['tipo_proyecto'].'" data-nombreproyecto="'.$row['nombre_proyecto'].'" data-fechaentrega="'.$row['fecha_entrega'].'" data-idestatus="'.$row['id_estatus'].'" data-idcolaborador="'.$row['id_colaborador'].'" data-toggle="tooltip"
                                                 data-placement="left" title="Eliminar Estatus">
