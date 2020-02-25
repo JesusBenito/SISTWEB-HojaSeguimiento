@@ -2,8 +2,8 @@
 include("../head.php")
 ?>
 
-<div class="row bg-title"
-        style="background:url(../plugins/images/heading-title-bg.jpg) no-repeat center center /cover;">
+    <div class="row bg-title"
+         style="background:url(../plugins/images/heading-title-bg.jpg) no-repeat center center /cover;">
         <div class="col-lg-12">
             <h4 class="page-title">Agregar Nueva Actividad</h4>
         </div>
@@ -17,7 +17,7 @@ include("../head.php")
     </div>
 
     <div class="container">
-        
+
 
         <div class="card o-hidden border-0 shadow-lg my-5">
             <div class="card-body p-0">
@@ -35,7 +35,7 @@ include("../head.php")
 
                                 <div class="form-group row">
                                     <div class="col-sm-12 mb-3 mb-sm-0">
-                                         Nombre del proyecto
+                                        Nombre del proyecto
                                         <select type="text" class="form-control form-control-user" required>
                                             <?php
                                             include "../conn.php";
