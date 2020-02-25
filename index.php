@@ -1,25 +1,3 @@
-Skip to content
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
-
-@JesusBenito
-GitVlimMaster
-/
-SISTWEB_HojaSeguimiento
-Private
-1
-00
-Code Issues 0 Pull requests 0 Actions Projects 0 Wiki Security Insights
-SISTWEB_HojaSeguimiento/index.php
-@EdgarOsorio EdgarOsorio Update: Se agrego el login y cambios en agregarActividad
-86beded 42 minutes ago
-@EdgarOsorio@MartinFuerte
-47 lines (41 sloc)  1.52 KB
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -62,15 +40,3 @@ SISTWEB_HojaSeguimiento/index.php
 <script src="plugins/bower_components/bootstrap-extension/js/bootstrap-extension.min.js"></script>
 </body>
 </html>
-© 2020 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
