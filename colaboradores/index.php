@@ -43,6 +43,7 @@ include("../head.php")
 
                                             <div class="form-group row">
                                                 <div class="col-sm-12 mb-3 mb-sm-0">
+                                                    Nombre
                                                     <input type="text" class="form-control form-control-user"
                                                            id="usuario_nombres"
                                                            placeholder="Nombre ( s )" required="">
@@ -51,11 +52,13 @@ include("../head.php")
 
                                             <div class="form-group row">
                                                 <div class="col-sm-6">
+                                                    Apellido Paterno
                                                     <input type="text" class="form-control form-control-user"
                                                            id="usuario_ap_1"
                                                            placeholder="Apellido Paterno">
                                                 </div>
                                                 <div class="col-sm-6">
+                                                    Apellido Materno
                                                     <input type="text" class="form-control form-control-user"
                                                            id="usuario_ap_2"
                                                            placeholder="Apellido Materno">
@@ -64,10 +67,12 @@ include("../head.php")
 
                                             <div class="form-group row">
                                                 <div class="col-sm-6">
+                                                    Teléfono
                                                     <input type="number" class="form-control form-control-user"
                                                            id="usuario_telefono" placeholder="Teléfono" required="">
                                                 </div>
                                                 <div class="col-sm-6">
+                                                    Numero de Usuario
                                                     <input type="number" class="form-control form-control-user"
                                                            id="numero_usuario"
                                                            placeholder="Numero de Usuario" required="">
@@ -76,6 +81,7 @@ include("../head.php")
 
 
                                             <div class="form-group">
+                                                Correo Electronico
                                                 <input type="email" class="form-control form-control-user"
                                                        id="usuario_email"
                                                        placeholder="Correo Electronico" required="">
@@ -83,11 +89,13 @@ include("../head.php")
 
                                             <div class="form-group row">
                                                 <div class="col-sm-6 mb-3 mb-sm-0">
+                                                    Fecha de Nacimiento
                                                     <input type="date" class="form-control form-control-user"
                                                            id="nacimiento"
                                                            placeholder="Fecha de Nacimiento" required="">
                                                 </div>
                                                 <div class="col-sm-6">
+                                                    Area
                                                     <input type="text" class="form-control form-control-user" id="area"
                                                            placeholder="Area" required="">
                                                 </div>
@@ -95,6 +103,7 @@ include("../head.php")
 
                                             <div class="form-group row">
                                                 <div class="col-sm-12 mb-3 mb-sm-0">
+                                                    Dirección
                                                     <input type="text" class="form-control form-control-user"
                                                            id="direccion"
                                                            placeholder="Direccion" required="">
@@ -122,7 +131,7 @@ include("../head.php")
                                 <th>Correo</th>
                                 <th>Fecha de Nacimiento</th>
                                 <th>Dirección</th>
-                                <th>Nombre del Área</th>
+
                                 <th class="text-nowrap">Action</th>
                             </tr>
                             </thead>
@@ -144,7 +153,7 @@ include("../head.php")
                                             <td>' . $row['correo'] . '</td>
                                             <td>' . $row['fecha_nacimineto'] . '</td>
                                             <td>' . $row['direccion'] . '</td>
-                                            <td>' . $row['area'] . '</td>
+
                                             <td>
                                                 <button class="btn btn-danger btn-circle btn-sm bajaMarca" data-id_colaborador="' . $row['id_colaborador'] . '" data-n_colaborador="' . $row['numero_colaborador'] . '" data-toggle="tooltip"
                                                 data-placement="left" title="Eliminar Estatus">
