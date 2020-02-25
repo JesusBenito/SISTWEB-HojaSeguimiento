@@ -48,7 +48,7 @@
                     <li>
                         <a href="javascript:void(0)">
                             <!--This is logo text--><img src="../images/VLIM_ti.png" alt="home"
-                                class="light-logo" alt="home" href="index.php" style="width: 150px;"/></a>
+                                class="light-logo" alt="home" href="../dashboard" style="width: 150px;"/></a>
                     </li>
                 </ul>
                 <!-- /.Logo -->
@@ -83,7 +83,7 @@
                         <!-- Left navbar-header -->
                         <h3 class="menu-title">Dashboard</h3>
                         <ul class="sidebar-menu">
-                            <li><a href="../index.php">Inicio</a></li>
+                            <li><a href="../dashboard">Inicio</a></li>
                             <li><a href="../colaboradores">Colaboradores</a></li>
                             <li><a href="../estatus">Estatus</a></li>
                             <li><a href="../areas">Áreas</a></li>

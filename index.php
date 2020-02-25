@@ -1,86 +1,47 @@
-<?php
-include("head1.php")
-?>
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="container-fluid">
-    <!-- .row -->
-    <div class="row bg-title"
-        style="background:url(plugins/images/heading-title-bg.jpg) no-repeat center center /cover;">
-        <div class="col-lg-12">
-            <h4 class="page-title">Inicio</h4>
-        </div>
-        <div class="col-sm-6 col-md-6 col-xs-12">
-            <ol class="breadcrumb pull-left">
-                <li class="active">Dashboard</li>
-            </ol>
-        </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="plugins/bower_components/bootstrap-extension/css/bootstrap-extension.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
 
-        <!-- /.col-lg-12 -->
-    </div>
-    <!--row -->
-    <div class="row">
-        <div class="col-md-12 col-lg-12 col-sm-12">
-            <div class="white-box">
-                <div class="row row-in">
-                    <div class="col-lg-4 col-sm-6 row-in-br">
-                        <div class="col-in row">
-                            <div class="col-md-6 col-sm-6 col-xs-6"> <i class="fa fa-users"></i>
-                                <h5 class="text-muted vb">COLABORADORES</h5>
-                            </div>
-                            <div class="col-md-6 col-sm-6 col-xs-6">
-                                <h3 class="counter text-right m-t-15 text-danger">15</h3>
-                            </div>
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="40"
-                                        aria-valuemin="0" aria-valuemax="100" style="width: 40%"> <span
-                                            class="sr-only">40% Complete (success)</span> </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 row-in-br  b-r-none">
-                        <div class="col-in row">
-                            <div class="col-md-6 col-sm-6 col-xs-6"> <i class="fa fa-sitemap"></i>
-                                <h5 class="text-muted vb">PROYECTOS</h5>
-                            </div>
-                            <div class="col-md-6 col-sm-6 col-xs-6">
-                                <h3 class="counter text-right m-t-15 text-megna">33</h3>
-                            </div>
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-megna" role="progressbar" aria-valuenow="40"
-                                        aria-valuemin="0" aria-valuemax="100" style="width: 40%"> <span
-                                            class="sr-only">40% Complete (success)</span> </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-sm-6 row-in-br">
-                        <div class="col-in row">
-                            <div class="col-md-6 col-sm-6 col-xs-6"> <i class="fa fa-users"></i>
-                                <h5 class="text-muted vb">CLIENTES</h5>
-                            </div>
-                            <div class="col-md-6 col-sm-6 col-xs-6">
-                                <h3 class="counter text-right m-t-15 text-primary">50</h3>
-                            </div>
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="progress">
-                                    <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="40"
-                                        aria-valuemin="0" aria-valuemax="100" style="width: 40%"> <span
-                                            class="sr-only">40% Complete (success)</span> </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                  
+<body>
+    <div class="box">
+        <form>
+            <h1>Control de Actividades</h1>
+            <div class="logo">
+                <img src="images/VLIM_ti1.png" alt="Logo Vlim">
             </div>
-        </div>
+            <div class="campo">
+                <label for="id_usurio">Usuario</label>
+                <input type="text" id="id_usuario" required>
+            </div>
+            <div class="campo">
+                <label for="pass">Contraseña</label>
+                <input type="text" id="pass" required>
+            </div>
+            <div class="campo">
+                <button class="btn" type="submit">
+                    Iniciar Sesión
+                </button>
+            </div>
+        </form>
     </div>
-    <!-- /.row -->
 
-</div><!-- /.container-fluid -->
-</div>
-<?php
-include("footer1.php")
-?>
+
+
+    <!-- jQuery -->
+    <script src="plugins/bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="bootstrap/dist/js/tether.min.js"></script>
+    <script src="bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="plugins/bower_components/bootstrap-extension/js/bootstrap-extension.min.js"></script>
+</body>
+
+</html>

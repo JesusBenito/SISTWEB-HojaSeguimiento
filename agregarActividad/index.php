@@ -5,12 +5,12 @@ include("../head.php")
 <div class="row bg-title"
         style="background:url(../plugins/images/heading-title-bg.jpg) no-repeat center center /cover;">
         <div class="col-lg-12">
-            <h4 class="page-title">Áreas</h4>
+            <h4 class="page-title">Agregar Nueva Actividad</h4>
         </div>
         <div class="col-sm-6 col-md-6 col-xs-12">
             <ol class="breadcrumb pull-left">
-                <li><a href="../index.php">Dashboard</a></li>
-                <li class="active">Agregar Nueva Área</li>
+                <li><a href="../dashboard">Dashboard</a></li>
+                <li class="active">Agregar Nueva Actividad</li>
             </ol>
         </div>
         <!-- /.col-lg-12 -->
@@ -35,8 +35,27 @@ include("../head.php")
 
                                 <div class="form-group row">
                                     <div class="col-sm-12 mb-3 mb-sm-0">
-                                         Nombre del colaborador
-                                        <select type="text" class="form-control form-control-user" required="">
+                                         Nombre del proyecto
+                                        <select type="text" class="form-control form-control-user" required>
+                                            <?php
+                                            include "../conn.php";
+                                            $sql = "SELECT `cat_proyectos`.*, `cat_estatus`.* FROM cat_proyectos, cat_estatus WHERE `cat_proyectos`.id_estatus = `cat_estatus`.id_estatus;";
+                                            $resultProyecto = mysqli_query($conn, $sql);
+                                            if($resultProyecto){
+                                                $num_rows = mysqli_num_rows($resultProyecto);
+                                                if($num_rows > 0) {
+                                                    while($row = mysqli_fetch_array($resultProyecto)){
+                                                        echo '<option value="'.$row['id_proyecto'].'">'.$row['nombre_proyecto'].' * | * '.$row['tipo_proyecto'].' * | * '.$row['estatus'].'</option>';
+                                                    }
+                                                } else {
+                                                    echo "No hay registros";
+                                                }
+                                            }else{
+                                                echo "Error: " . mysqli_error($conn);
+                                            }
+                                            mysqli_free_result($resultProyecto);
+                                            mysqli_close($conn);
+                                            ?>
                                         </select>
                                     </div>
                                 </div>
@@ -68,18 +87,8 @@ include("../head.php")
                                     </div>
                                 </div>
 
-
-                                <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="date" class="form-control form-control-user"  required="">
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <input type="text" class="form-control form-control-user"  required="">
-                                    </div>
-                                </div>
-
                                 <div class="form-group">
-                                    <div class="col-sm-12 mb-3 mb-sm-0" align="center">
+                                    <div class="col-sm-12 mb-3 mb-sm-0 text-center">
                                         Actividad
                                         <textarea type="text" class="form-control form-control-user"  required="" rows="10" cols="40">
                                         </textarea>
@@ -87,8 +96,8 @@ include("../head.php")
                                 </div>
 
                                 <div class="form-group">
-                                    <div class="col-sm-12 mb-3 mb-sm-0" align="center">
-                                        <a href="colaboradores.php"><button class="fcbtn btn btn-success btn-outline btn-1b">GUARDAR</button></a>
+                                    <div class="col-sm-12 mb-3 mb-sm-0 text-center">
+                                        <a href="#"><button class="fcbtn btn btn-success btn-outline btn-1b">GUARDAR</button></a>
                                     </div>
                                 </div>
                         </div>

@@ -37,7 +37,8 @@
 <script src="../plugins/bower_components/jsgrid/db.js"></script>
 <script type="text/javascript" src="../plugins/bower_components/jsgrid/dist/jsgrid.min.js"></script>
 <script src="../js/jsgrid-init.js"></script>
-<script src="js/colaboradores.js"></script>
+<!-- Own JS -->
+<script src="../assets/js/main.js"></script>
 <script>
     $(document).ready(function(){
         $("#abrirModal").click(function(){
