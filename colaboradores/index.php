@@ -151,7 +151,7 @@ include("../head.php")
                                             <td>' . $row['nombre'] . '</td>
                                             <td>' . $row['telefono'] . '</td>
                                             <td>' . $row['correo'] . '</td>
-                                            <td>' . $row['fecha_nacimineto'] . '</td>
+                                            <td>' . $row['fecha_nacimiento'] . '</td>
                                             <td>' . $row['direccion'] . '</td>
                                             <td>
                                                 <button class="btn btn-danger btn-circle btn-sm bajaMarca" data-id_colaborador="' . $row['id_colaborador'] . '" data-n_colaborador="' . $row['numero_colaborador'] . '" data-toggle="tooltip"

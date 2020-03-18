@@ -1,3 +1,4 @@
+'use strict'
 /**
 * |------------------------------------------------------|
 * | Guardar Nuevo Estatus
@@ -78,4 +79,41 @@ $('#guardar').click(function (e) {
         }
     });
 });
-
+/**
+* |------------------------------------------------------|
+* | Log
+* |------------------------------------------------------|
+* @author Edgar edgar.delacruz@vlim.com.mx
+* @date 12-03-2020
+*/
+$('#iniciarSesion').click(function (e) {
+    e.preventDefault(e);
+    iniciarSesion();
+});
+function iniciarSesion() {
+    let us = $('#usuario').val();
+    let pw = $('#pass').val();
+    
+    if (us == '' || us == null ||
+        pw == '' || pw == null) {
+            alert("Campos vacios.");
+    } else {
+        $.ajax({
+            url: 'peticiones/log.php',
+            type: 'POST',
+            // dataType: 'JSON',
+            data: {
+                us: us,
+                pw: pw
+            },
+            success: function (response) {
+                if (response == "exito") {
+                    // alert("OK")
+                    window.location = 'dashboard';
+                } else if (response == "fracaso") {
+                    alert("Datos incorrectos");
+                }
+            }
+        });
+    }
+}

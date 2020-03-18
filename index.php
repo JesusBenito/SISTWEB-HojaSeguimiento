@@ -19,14 +19,14 @@
         </div>
         <div class="campo">
             <label for="id_usurio">Usuario</label>
-            <input type="text" id="id_usuario" required>
+            <input type="text" id="usuario" required>
         </div>
         <div class="campo">
             <label for="pass">Contraseña</label>
-            <input type="text" id="pass" required>
+            <input type="password" id="pass" required>
         </div>
         <div class="campo">
-            <button class="btn" type="submit">
+            <button class="btn" type="submit" id="iniciarSesion">
                 Iniciar Sesión
             </button>
         </div>
@@ -38,5 +38,7 @@
 <script src="bootstrap/dist/js/tether.min.js"></script>
 <script src="bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="plugins/bower_components/bootstrap-extension/js/bootstrap-extension.min.js"></script>
+<!-- Own scripts -->
+<script src="assets/js/main.js"></script>
 </body>
 </html>
